@@ -53,31 +53,16 @@
                     //skip header line
                 } else if (lineIndex % 2 == 1) {
                     //male data
-                    //male.push(temp[9])
                     series[0].data.push(parseFloat(temp[9]));
-                    //xAxis.categories.push(temp[1])
                 } else if (lineIndex % 2 == 0) {
                 //    //female data
-                //    //female.push(temp[9])
                     series[1].data.push(parseFloat(temp[9]));
+
+                    //jedes Land nur 1mal in categories
                     xAxis.categories.push(temp[1])
                 }
                 lineIndex++;
             });
-
-            ////sort needed Data
-            //lifeData.sort(function(a,b){
-            //    return (parseFloat(b[2])-parseFloat(a[2]))
-            //});
-//
-            ////fill chart with sorted Data
-            ////xAxis categories
-            //lifeData.forEach(function(temp) {
-            //    xAxis.categories.push(temp[0]);
-//
-            //    //Data values
-            //    series[0].data.push(parseFloat(temp[2]));
-            //});
 
             var chart = {
                 type: 'column'

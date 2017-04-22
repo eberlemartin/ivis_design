@@ -1,10 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--1. import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--2. import HighCharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>German population compared to meat production</title>
 </head>
 <body>
+
+<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+<script language="JavaScript">
+    $(document).ready(function() {
+
+        // 5. Add csv for Data
+
+        var series = [
+            {
+                name: 'Population',
+             //   type: 'column',
+                data: [],
+                color: '#ff0000'
+            },
+            {
+                name: 'Meat',
+             //   type: 'spline',
+             //   yAxis: 1,
+                data: [],
+                color: '#00ff00'
+            }
+        ];
+
+        //get meat data
+        $.get('FAOSTAT_data_meat.csv', function(data2) {
+
+            var unitFixer = function(lineData){
+                if(lineData[11] == "1000 Head") {
+                    return parseInt(lineData[12]);
+                } else {
+                    return (parseInt(lineData[12])/1000);
+                }
+            };
+
+            //split to lines
+            var lines = data2.split('\n');
+
+            var lineIndex = 0;
+            var tempData = [0,0,0,0,0,0];
+            //split to values
+            lines.forEach(function (line) {
+                var temp = line.split(',', 14)
+                //save all needed Data to Array
+                if (lineIndex == 0) {                                   //skip header line
+                    lineIndex++;
+                } else if (temp[10] == 2008){                            //sum up data from 2008
+                    tempData[0] += unitFixer(temp);
+                    //console.log("line: "+ temp[10] + "Data: " + temp[12]);
+                }
+                else if (temp[10] == 2009){                              //sum up data from 2009
+                    tempData[1] += unitFixer(temp);
+                    //series[1].data[1] = parseInt(series[1].data[1])+parseInt(temp[12]);
+                }
+                else if (temp[10] == 2010){                              //sum up data from 2010
+                    tempData[2] += unitFixer(temp);
+                    //series[1].data[2] += parseFloat(temp[12]);
+                }
+                else if (temp[10] == 2011){                              //sum up data from 2011
+                    tempData[3] += unitFixer(temp);
+                    //series[1].data[3] += parseFloat(temp[12]);
+                }
+                else if (temp[10] == 2012){                              //sum up data from 2012
+                    tempData[4] += unitFixer(temp);
+                    //series[1].data[4] += parseFloat(temp[12]);
+                }
+                else if (temp[10] == 2013){                              //sum up data from 2013
+                    tempData[5] += unitFixer(temp);
+                    //series[1].data[5] += parseFloat(temp[12]);
+                }
+            });
+            series[1].data = tempData;
+        });
+
+        //get popultaion data
+        $.get('FAOSTAT_data_population.csv', function(data) {
+            //split to lines
+            var lines = data.split('\n');
+            console.log(lines);
+
+            var lineIndex = 0;
+            //split to values
+            lines.forEach(function (line) {
+                var temp = line.split(',', 14);
+                //save all needed Data to Array
+                if (lineIndex == 0) {
+                    //skip header line
+                } else {
+                    series[0].data.push(parseFloat(temp[11]));
+                }
+                lineIndex++;
+            });
+
+        });
+
+        var title = {
+            text: 'Correlation of meat consumption and population in Germany',
+            align: 'left'
+        };
+
+        var tooltip = {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            shared: true
+        };
+
+        var plotOptions = {
+            column: {
+                //stacking: 'percent'
+            }
+        };
+
+        var xAxis = {
+            categories: [2008, 2009, 2010, 2011, 2012, 2013],
+            title: {
+                text: 'Jahr'
+            }
+        };
+
+        var yAxis = { //first yAxis
+            labels: {
+                //format: '{value}',
+                style: {
+                    color: '#ff746f'
+                }
+            },
+            title: {
+                text: '1000 Personen',
+                style: {
+                    color: '#ff746f'
+                }
+            }
+        //},
+        //    { //second yAxis
+        //        min:0,
+        //        title: {
+        //            text: '1000 Tiere',
+        //            style: {
+        //                color: '#8284ff'
+        //            }
+        //        },
+        //        labels: {
+        //            //format: '{value}',
+        //            style: {
+        //                color: '#8284ff'
+        //            }
+        //        },
+        //        opposite: true
+            };
+
+
+        var json = {};
+        json.series = series;
+        json.xAxis = xAxis;
+        //json.chart = chart;
+        json.title = title;
+        json.yAxis = yAxis;
+        json.tooltip = tooltip;
+        //json.plotOptions = plotOptions;
+        //json.legend = legend;
+
+        $('#container').highcharts(json);
+
+    });
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,61 @@
+Domain Code,Domain,Area Code,Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description
+QL,Livestock Primary,79,Germany,5322,Production,944,"Meat indigenous, cattle",2008,2008,Head,4202136,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,944,"Meat indigenous, cattle",2009,2009,Head,4240204,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,944,"Meat indigenous, cattle",2010,2010,Head,4314599,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,944,"Meat indigenous, cattle",2011,2011,Head,4272897,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,944,"Meat indigenous, cattle",2012,2012,Head,4171402,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,944,"Meat indigenous, cattle",2013,2013,Head,4004974,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1094,"Meat indigenous, chicken",2008,2008,1000 Head,688461,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1094,"Meat indigenous, chicken",2009,2009,1000 Head,728947,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1094,"Meat indigenous, chicken",2010,2010,1000 Head,685387,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1094,"Meat indigenous, chicken",2011,2011,1000 Head,719264,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1094,"Meat indigenous, chicken",2012,2012,1000 Head,734504,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1094,"Meat indigenous, chicken",2013,2013,1000 Head,751399,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1070,"Meat indigenous, duck",2008,2008,1000 Head,35505,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1070,"Meat indigenous, duck",2009,2009,1000 Head,34109,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1070,"Meat indigenous, duck",2010,2010,1000 Head,27389,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1070,"Meat indigenous, duck",2011,2011,1000 Head,25088,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1070,"Meat indigenous, duck",2012,2012,1000 Head,24939,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1070,"Meat indigenous, duck",2013,2013,1000 Head,19274,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1077,"Meat indigenous, geese",2008,2008,1000 Head,477,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1077,"Meat indigenous, geese",2009,2009,1000 Head,516,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1077,"Meat indigenous, geese",2010,2010,1000 Head,543,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1077,"Meat indigenous, geese",2011,2011,1000 Head,552,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1077,"Meat indigenous, geese",2012,2012,1000 Head,602,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1077,"Meat indigenous, geese",2013,2013,1000 Head,653,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1032,"Meat indigenous, goat",2008,2008,Head,26476,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1032,"Meat indigenous, goat",2009,2009,Head,27947,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1032,"Meat indigenous, goat",2010,2010,Head,28687,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1032,"Meat indigenous, goat",2011,2011,Head,30278,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1032,"Meat indigenous, goat",2012,2012,Head,27907,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1032,"Meat indigenous, goat",2013,2013,Head,25826,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1120,"Meat indigenous, horse",2008,2008,Head,13039,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1120,"Meat indigenous, horse",2009,2009,Head,11878,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1120,"Meat indigenous, horse",2010,2010,Head,13398,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1120,"Meat indigenous, horse",2011,2011,Head,14961,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1120,"Meat indigenous, horse",2012,2012,Head,14707,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1120,"Meat indigenous, horse",2013,2013,Head,14784,F,FAO estimate
+QL,Livestock Primary,79,Germany,5322,Production,1055,"Meat indigenous, pig",2008,2008,Head,47515345,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1055,"Meat indigenous, pig",2009,2009,Head,48064386,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1055,"Meat indigenous, pig",2010,2010,Head,48867311,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1055,"Meat indigenous, pig",2011,2011,Head,49581442,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1055,"Meat indigenous, pig",2012,2012,Head,47644769,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1055,"Meat indigenous, pig",2013,2013,Head,47900961,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1144,"Meat indigenous, rabbit",2008,2008,1000 Head,21041,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1144,"Meat indigenous, rabbit",2009,2009,1000 Head,22037,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1144,"Meat indigenous, rabbit",2010,2010,1000 Head,22042,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1144,"Meat indigenous, rabbit",2011,2011,1000 Head,22047,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1144,"Meat indigenous, rabbit",2012,2012,1000 Head,22016,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1144,"Meat indigenous, rabbit",2013,2013,1000 Head,22016,F,FAO estimate
+QL,Livestock Primary,79,Germany,5322,Production,1012,"Meat indigenous, sheep",2008,2008,Head,1944054,*,Unofficial figure
+QL,Livestock Primary,79,Germany,5322,Production,1012,"Meat indigenous, sheep",2009,2009,Head,1847385,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1012,"Meat indigenous, sheep",2010,2010,Head,1883377,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1012,"Meat indigenous, sheep",2011,2011,Head,1941578,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1012,"Meat indigenous, sheep",2012,2012,Head,1806920,,Official data
+QL,Livestock Primary,79,Germany,5322,Production,1012,"Meat indigenous, sheep",2013,2013,Head,1747069,*,Unofficial figure
+QL,Livestock Primary,79,Germany,5323,Production,1087,"Meat indigenous, turkey",2008,2008,1000 Head,53324,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1087,"Meat indigenous, turkey",2009,2009,1000 Head,53256,F,FAO estimate
+QL,Livestock Primary,79,Germany,5323,Production,1087,"Meat indigenous, turkey",2010,2010,1000 Head,43019,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1087,"Meat indigenous, turkey",2011,2011,1000 Head,43106,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1087,"Meat indigenous, turkey",2012,2012,1000 Head,42692,,Official data
+QL,Livestock Primary,79,Germany,5323,Production,1087,"Meat indigenous, turkey",2013,2013,1000 Head,41689,,Official data
