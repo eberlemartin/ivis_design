@@ -13,9 +13,6 @@
 <div id="container" style="width: 800px; height: 600px; margin: 0 auto"></div>
 <script language="JavaScript">
     $(document).ready(function() {
-
-        // 5. Add csv for Data
-
         var series = [
             {
                 name: 'Population',
@@ -33,7 +30,7 @@
         ];
 
         //get meat data
-        $.get('FAOSTAT_data_meat.csv', function(data2) {
+        $.get('FAOSTAT_meat_full.csv', function(data2) {
 
             var unitFixer = function(lineData){
                 if(lineData[11] == "1000 Head") {
@@ -47,7 +44,7 @@
             var lines = data2.split('\n');
 
             var lineIndex = 0;
-            var tempData = [0,0,0,0,0,0];
+            var tempData = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
             //split to values
             lines.forEach(function (line) {
                 var temp = line.split(',', 14)
@@ -55,30 +52,54 @@
                 if (lineIndex == 0) {                                   //skip header line
                     lineIndex++;
                 }
-                else if (temp[10] == 2008){                            //sum up data from 2008
+                else if (temp[10] == 2000){                              //sum up data
                     tempData[0] += unitFixer(temp);
                 }
-                else if (temp[10] == 2009){                              //sum up data from 2009
+                else if (temp[10] == 2001){                              //sum up data
                     tempData[1] += unitFixer(temp);
                 }
-                else if (temp[10] == 2010){                              //sum up data from 2010
+                else if (temp[10] == 2002){                              //sum up data
                     tempData[2] += unitFixer(temp);
                 }
-                else if (temp[10] == 2011){                              //sum up data from 2011
+                else if (temp[10] == 2003){                              //sum up data
                     tempData[3] += unitFixer(temp);
                 }
-                else if (temp[10] == 2012){                              //sum up data from 2012
+                else if (temp[10] == 2004){                              //sum up data
                     tempData[4] += unitFixer(temp);
                 }
-                else if (temp[10] == 2013){                              //sum up data from 2013
+                else if (temp[10] == 2005){                              //sum up data
                     tempData[5] += unitFixer(temp);
+                }
+                else if (temp[10] == 2006){                              //sum up data
+                    tempData[6] += unitFixer(temp);
+                }
+                else if (temp[10] == 2007){                              //sum up data
+                    tempData[7] += unitFixer(temp);
+                }
+                else if (temp[10] == 2008){                            //sum up data from 2008
+                    tempData[8] += unitFixer(temp);
+                }
+                else if (temp[10] == 2009){                              //sum up data from 2009
+                    tempData[9] += unitFixer(temp);
+                }
+                else if (temp[10] == 2010){                              //sum up data from 2010
+                    tempData[10] += unitFixer(temp);
+                }
+                else if (temp[10] == 2011){                              //sum up data from 2011
+                    tempData[11] += unitFixer(temp);
+                }
+                else if (temp[10] == 2012){                              //sum up data from 2012
+                    tempData[12] += unitFixer(temp);
+                }
+                else if (temp[10] == 2013){                              //sum up data from 2013
+                    tempData[13] += unitFixer(temp);
                 }
             });
             series[1].data = tempData;
         });
 
         //get popultaion data
-        $.get('FAOSTAT_data_population.csv', function(data) {
+        $.get('FAOSTAT_population_full.csv', function(data) {
             //split to lines
             var lines = data.split('\n');
             console.log(lines);
@@ -120,13 +141,15 @@
         };
 
         var xAxis = {
-            categories: [2008, 2009, 2010, 2011, 2012, 2013],
+            categories: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
             title: {
                 text: 'Jahr'
             }
         };
 
-        var yAxis = [{ //first yAxis
+        var yAxis = [{ //first yAxis, pop
+            min: 0,
+            max: 100000,
             labels: {
                 format: '{value}',
                 style: {
@@ -140,8 +163,9 @@
                 }
             }
         },
-            { //second yAxis
-                min:0,
+            { //second yAxis, meat
+                min: 0,
+                max: 1000000,
                 title: {
                     text: '1000 Tiere',
                     style: {
